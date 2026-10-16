@@ -1,0 +1,19 @@
+<html>
+<head>
+<title>Navigation link</title>
+</head>
+<body bgcolor="lightblue">
+<center>
+<h1>Main Page</h1>
+</center>
+<br><br><br><br>
+<ul>
+<a href="img1.jpeg" target="navigationpage"><li>Image 1</li></a>
+<a href="img2.jpeg" target="navigationpage"><li>Image 2</li></a>
+</ul>
+<br><br><br>
+<center>
+<a href="prog3.html" target="_parent">Main Page</a>
+</center>
+</body>
+</html>

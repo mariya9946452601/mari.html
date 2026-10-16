@@ -1,0 +1,15 @@
+<html>
+<head>
+<title>Float</title>
+</head>
+<body bgcolor="lightyellow">
+<center>
+<h1>Floating content using iframe</h1>
+<iframe src="floatcontent.html" width="400px" height="400px"/>
+</iframe>
+<br>
+<br>
+<a href="prog3.html" target="_parent">Main Page</a>
+</center>
+</body>
+</html>

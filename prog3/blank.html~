@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Second page</title>
+</head>
+<body bgcolor="lightblue">
+<ul>
+<li><a href="mixed.html" target="_blank">Mixed</a></li><br>
+<li><a href="floating.html" target="_blank">Float</a></li><br>
+<li><a href="navigation.html" target="_blank">Navigation</a></li><br>
+</body>
+</html>
