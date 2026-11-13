@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Over</title>
+</head>
+<body>
+
+    <h1 id="text">HELLO</h1>
+
+    <img src="img6.jpg"
+         onmouseover="onmouse()"
+         onmouseout="outmouse()"
+         id="image"
+         width="300">
+
+    <script>
+        function onmouse() {
+            document.getElementById('text').innerText = 'Welcome to my page';
+            document.getElementById('image').src = "download.png";
+        }
+
+        function outmouse() {
+            document.getElementById('text').innerText = 'Hello World';
+            document.getElementById('image').src = "img5.png";
+        }
+    </script>
+
+</body>
+</html>
+
