@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>Online Exam</title>
+<style>
+body {
+    background: lightblue;
+    text-align: center;
+    font-family: Arial;
+}
+form {
+    background: white;
+    width: 350px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+h2 {
+    color: darkblue;
+}
+.question {
+    text-align: left;
+    margin: 15px;
+}
+input[type="submit"] {
+    background: darkblue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<form onsubmit="return checkAnswer()">
+<h2>Online Examination</h2>
+<p>Answer all questions</p>
+
+<div class="question">
+<p>1. Which language is used to create web pages?</p>
+<input type="radio" name="q1" value="HTML"> HTML<br>
+<input type="radio" name="q1" value="Python"> Python<br>
+<input type="radio" name="q1" value="C"> C<br>
+</div>
+
+<div class="question">
+<p>2. Which language is used for styling web pages?</p>
+<input type="radio" name="q2" value="Java"> Java<br>
+<input type="radio" name="q2" value="CSS"> CSS<br>
+<input type="radio" name="q2" value="HTML"> HTML<br>
+</div>
+
+<div class="question">
+<p>3. Which tag is used to create a paragraph?</p>
+<input type="radio" name="q3" value="h1"> h1<br>
+<input type="radio" name="q3" value="p"> p<br>
+<input type="radio" name="q3" value="br"> br<br>
+</div><br>
+
+<div class="question">
+<p>4. Which symbol is used for comments in JavaScript?</p>
+<input type="radio" name="q4" value="//"> //<br>
+<input type="radio" name="q4" value="##"> ##<br>
+<input type="radio" name="q4" value="**"> **<br>
+</div><br>
+
+<div class="question">
+<p>5. Which function displays an alert box?</p>
+<input type="radio" name="q5" value="prompt()"> prompt()<br>
+<input type="radio" name="q5" value="alert()"> alert()<br>
+<input type="radio" name="q5" value="print()"> print()<br>
+</div><br>
+
+<div class="question">
+<p>6. Which keyword is used to declare a variable?</p>
+<input type="radio" name="q6" value="int"> int<br>
+<input type="radio" name="q6" value="var"> var<br>
+<input type="radio" name="q6" value="string"> string<br>
+</div><br>
+
+<div class="question">
+<p>7. Which event occurs when a button is clicked?</p>
+<input type="radio" name="q7" value="onload"> onload<br>
+<input type="radio" name="q7" value="onchange"> onchange<br>
+<input type="radio" name="q7" value="onclick"> onclick<br>
+</div><br>
+
+<div class="question">
+<p>8. Which method is used to select an element by ID?</p>
+<input type="radio" name="q8" value="getElementById()"> getElementById()<br>
+<input type="radio" name="q8" value="write()"> write()<br>
+<input type="radio" name="q8" value="alert()"> alert()<br>
+</div><br>
+
+<div class="question">
+<p>9. Which tag is used to insert an image?</p>
+<input type="radio" name="q9" value="img"> img<br>
+<input type="radio" name="q9" value="table"> table<br>
+<input type="radio" name="q9" value="br"> br<br>
+</div><br>
+
+<div class="question">
+<p>10. What is the full form of HTML?</p>
+<input type="radio" name="q10" value="Hyper Text Markup Language"> Hyper Text Markup Language<br>
+<input type="radio" name="q10" value="High Text Machine Language"> High Text Machine Language<br>
+<input type="radio" name="q10" value="Hyper Tool Markup Language"> Hyper Tool Markup Language<br>
+</div><br>
+
+<input type="submit" value="Submit Exam">
+<h3 id="result"></h3>
+</form>
+
+<script>
+function checkAnswer() {
+      var score = 0;
+    var q1 = document.querySelector('input[name="q1"]:checked');
+    var q2 = document.querySelector('input[name="q2"]:checked');
+    var q3 = document.querySelector('input[name="q3"]:checked');
+    var q4 = document.querySelector('input[name="q4"]:checked');
+    var q5 = document.querySelector('input[name="q5"]:checked');
+    var q6 = document.querySelector('input[name="q6"]:checked');
+    var q7 = document.querySelector('input[name="q7"]:checked');
+    var q8 = document.querySelector('input[name="q8"]:checked');
+    var q9 = document.querySelector('input[name="q9"]:checked');
+    var q10 = document.querySelector('input[name="q10"]:checked');
+
+    if (q1 && q2 && q3 && q4 && q5 && q6 && q7 && q8 && q9 && q10) {
+      if (q1.value == "HTML") {
+            score++;
+        }
+        if (q2.value == "CSS") {
+            score++;
+        }
+        if (q3.value == "p") {
+            score++;
+        }
+        if (q4.value == "//") {
+            score++;
+        }
+        if (q5.value == "alert()") {
+            score++;
+        }
+        if (q6.value == "var") {
+            score++;
+        }
+        if (q7.value == "onclick") {
+            score++;
+        }
+        if (q8.value == "getElementById()") {
+            score++;
+        }
+        if (q9.value == "img") {
+            score++;
+        }
+        if (q10.value == "Hyper Text Markup Language") {
+            score++;
+        }
+
+        document.getElementById("result").innerHTML =
+        "Exam Completed!<br>Your Score: " + score + "/10";
+    } else {
+        alert("Please answer all questions");
+    }
+    return false;
+}
+</script>
+</body>
+</html>
+
